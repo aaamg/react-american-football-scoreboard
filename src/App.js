@@ -28,6 +28,10 @@ function App() {
           </div>
         </div>
         <BottomRow />
+        <div className="quarter">
+          <h3 className="quarter__title">Quarter</h3>
+          <div className="quarter__value">{qtr}</div>
+        </div>
       </section>
       <section className="buttons">
         <div className="homeButtons">
