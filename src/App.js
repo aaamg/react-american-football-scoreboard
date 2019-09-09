@@ -9,6 +9,7 @@ function App() {
   const [countawayscore, setAwayscore] = useState(0);
   const [number, setQtr] = useState(1);
   const [downs, setD] = useState(1);
+  const [yards, setYards] = useState(1);
  
 
   return (
@@ -28,7 +29,7 @@ function App() {
             <div className="away__score">{countawayscore}</div>
           </div>
         </div>
-        <BottomRow down = {downs} qtr = {number}/>
+        <BottomRow down = {downs} qtr = {number} yard={yards} />
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -43,6 +44,10 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setQtr(number + 1)}>Quarter</button>
           <button className="awayButtons__touchdown" onClick={() => setD(downs + 1)}>Down</button>
+        </div>
+        <div className="awayButtons">
+          <button className="awayButtons__touchdown" onClick={() => setYards(yards + 1)}>Yard + 1</button>
+          <button className="awayButtons__touchdown" onClick={() => setYards(yards - 1)}>Yard - 1</button>
         </div>
       </section>
     </div>
