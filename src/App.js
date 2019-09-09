@@ -8,7 +8,7 @@ function App() {
   const [counthomescore, setHomescore] = useState(7);
   const [countawayscore, setAwayscore] = useState(0);
   const [number, setQtr] = useState(1);
-  const {downs, setDowns} = useState(1);
+  const [downs, setD] = useState(1);
  
 
   return (
@@ -42,7 +42,7 @@ function App() {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setQtr(number + 1)}>Quarter</button>
-          <button className="awayButtons__touchdown" onClick={() => setDowns(downs + 1)}>Down</button>
+          <button className="awayButtons__touchdown" onClick={() => setD(downs + 1)}>Down</button>
         </div>
       </section>
     </div>
