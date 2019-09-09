@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./App.css";
-import App from "./App";
+import App from "./App"
 
-const BottomRow = () => {
-  // const [qtr, setQtr] = useState((0));
+
+const BottomRow = (props) => {
+  //const [qtr, setQtr] = useState(1);
+  
   return (
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
+        <div className="down__value">{props.down}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
@@ -18,16 +20,12 @@ const BottomRow = () => {
         <h3 className="ballOn__title">Ball on</h3>
         <div className="ballOn__value">21</div>
       </div>
-      {/* <div className="quarter">
+      <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">{qtr}</div>
-      </div> */}
+        <div className="quarter__value">{props.qtr}</div>
+      </div>
     </div>
   );
 };
 
 export default BottomRow;
-
-
-
-//const [qtr, setQtr] = useState((0));
